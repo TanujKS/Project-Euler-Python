@@ -1,5 +1,7 @@
-import time
-start_time = time.time()
+try:
+    import timing
+except ImportError:
+    pass
 
 originalNumber = 600851475143
 
@@ -19,5 +21,3 @@ while m <= n:
 
 
 print(f"The largest prime factor in {originalNumber} is {factors[len(factors) - 1]}")
-
-print(f"Program took {(time.time() - start_time)} seconds ")
